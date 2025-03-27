@@ -1,5 +1,4 @@
-
-import { Message, formatTime, User } from "@/utils/data";
+import { Message, formatTime, User } from "@/utils/data.tsx";
 import UserAvatar from "@/components/ui/UserAvatar";
 import { cn } from "@/lib/utils";
 

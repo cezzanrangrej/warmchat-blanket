@@ -1,7 +1,6 @@
-
 import { useState } from "react";
 import { Paperclip, Image, Mic, Send, Smile } from "lucide-react";
-import { useChat } from "@/utils/data";
+import { useChat } from "@/utils/data.tsx";
 
 const MessageInput = () => {
   const [message, setMessage] = useState("");

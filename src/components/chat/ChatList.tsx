@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { formatDate, formatTime, useChat } from "@/utils/data";
+import { formatDate, formatTime, useChat } from "@/utils/data.tsx";
 import UserAvatar from "@/components/ui/UserAvatar";
 import { UsersRound } from "lucide-react";
 

@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import MessageBubble from "./MessageBubble";
 import MessageInput from "./MessageInput";
-import { User, useChat } from "@/utils/data";
+import { User, useChat } from "@/utils/data.tsx";
 import Header from "../layout/Header";
 import { useNavigate } from "react-router-dom";
 

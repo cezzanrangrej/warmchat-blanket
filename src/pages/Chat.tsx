@@ -1,7 +1,7 @@
 
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
-import { useChat } from "@/utils/data";
+import { useChat } from "@/utils/data.tsx";
 import Conversation from "@/components/chat/Conversation";
 import Header from "@/components/layout/Header";
 
