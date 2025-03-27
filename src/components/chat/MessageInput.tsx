@@ -16,25 +16,25 @@ const MessageInput = () => {
   };
 
   return (
-    <div className="p-4 bg-gradient-to-r from-secondary to-secondary/50 backdrop-blur-sm border-t border-primary/10">
+    <div className="p-4 bg-gradient-to-r from-secondary/90 to-secondary/70 backdrop-blur-sm border-t border-white/5">
       <form onSubmit={handleSubmit} className="flex items-center gap-2">
         <button 
           type="button" 
-          className="text-primary hover:text-accent transition-colors p-2 rounded-full hover:bg-white/30 backdrop-blur-sm"
+          className="text-muted-foreground hover:text-primary transition-colors p-2 rounded-full hover:bg-white/10 backdrop-blur-sm"
           aria-label="Attach a file"
         >
           <Paperclip size={20} />
         </button>
         <button 
           type="button" 
-          className="text-primary hover:text-accent transition-colors p-2 rounded-full hover:bg-white/30 backdrop-blur-sm"
+          className="text-muted-foreground hover:text-primary transition-colors p-2 rounded-full hover:bg-white/10 backdrop-blur-sm"
           aria-label="Share an image"
         >
           <Image size={20} />
         </button>
         <button 
           type="button" 
-          className="text-primary hover:text-accent transition-colors p-2 rounded-full hover:bg-white/30 backdrop-blur-sm"
+          className="text-muted-foreground hover:text-primary transition-colors p-2 rounded-full hover:bg-white/10 backdrop-blur-sm"
           aria-label="Record audio"
         >
           <Mic size={20} />
@@ -49,7 +49,7 @@ const MessageInput = () => {
           />
           <button 
             type="button" 
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-primary hover:text-accent transition-colors"
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-accent transition-colors"
             aria-label="Add emoji"
           >
             <Smile size={20} />
@@ -60,7 +60,7 @@ const MessageInput = () => {
           className={`p-3 rounded-full flex items-center justify-center transition-all duration-300 ${
             message.trim() 
               ? "bg-gradient-primary text-white vibrant-shadow hover:opacity-90 animate-pulse-glow" 
-              : "bg-gray-200 text-gray-500 cursor-not-allowed"
+              : "bg-muted text-muted-foreground cursor-not-allowed"
           }`}
           aria-label="Send message"
           disabled={!message.trim()}

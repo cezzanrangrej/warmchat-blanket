@@ -22,7 +22,7 @@ const Chat = () => {
   }, [id, chats, setCurrentChat, navigate]);
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-br from-secondary/30 to-background">
+    <div className="h-full flex flex-col bg-gradient-to-br from-secondary/50 to-background">
       <Conversation isMobile={true} />
     </div>
   );

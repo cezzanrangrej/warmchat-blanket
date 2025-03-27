@@ -19,7 +19,7 @@ const MessageBubble = ({ message, sender, isCurrentUser, showAvatar = true }: Me
     switch (mediaType) {
       case "image":
         return (
-          <div className="mt-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+          <div className="mt-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all">
             <img 
               src={mediaUrl} 
               alt="Shared image" 
@@ -30,7 +30,7 @@ const MessageBubble = ({ message, sender, isCurrentUser, showAvatar = true }: Me
         );
       case "video":
         return (
-          <div className="mt-2 rounded-lg overflow-hidden shadow-md">
+          <div className="mt-2 rounded-lg overflow-hidden shadow-lg">
             <video 
               src={mediaUrl}
               controls
@@ -40,14 +40,14 @@ const MessageBubble = ({ message, sender, isCurrentUser, showAvatar = true }: Me
         );
       case "audio":
         return (
-          <div className="mt-2 p-2 bg-white/80 backdrop-blur-md rounded-lg shadow-sm">
+          <div className="mt-2 p-2 neo-blur rounded-lg shadow-md">
             <audio src={mediaUrl} controls className="w-full" />
           </div>
         );
       case "document":
         return (
-          <div className="mt-2 p-3 bg-white/80 backdrop-blur-md rounded-lg flex items-center gap-2 hover:bg-white transition-colors cursor-pointer shadow-sm">
-            <div className="p-2 bg-primary/10 rounded">
+          <div className="mt-2 p-3 neo-blur rounded-lg flex items-center gap-2 hover:bg-white/10 transition-colors cursor-pointer shadow-md">
+            <div className="p-2 bg-primary/20 rounded">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                 <polyline points="14 2 14 8 20 8"></polyline>
@@ -57,7 +57,7 @@ const MessageBubble = ({ message, sender, isCurrentUser, showAvatar = true }: Me
               </svg>
             </div>
             <div className="flex-1 min-w-0">
-              <p className="font-medium text-sm truncate">Document.pdf</p>
+              <p className="font-medium text-sm truncate text-foreground">Document.pdf</p>
               <p className="text-xs text-muted-foreground">2.4 MB</p>
             </div>
           </div>

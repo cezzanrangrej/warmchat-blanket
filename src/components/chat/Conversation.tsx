@@ -22,14 +22,14 @@ const Conversation = ({ isMobile }: ConversationProps) => {
 
   if (!currentChat) {
     return (
-      <div className="flex-1 flex flex-col items-center justify-center p-8 bg-gradient-to-br from-secondary/50 to-background">
+      <div className="flex-1 flex flex-col items-center justify-center p-8 bg-gradient-to-br from-secondary/30 to-background">
         <div className="text-center animate-fade-in">
-          <div className="mb-6 p-6 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 inline-flex animate-float shadow-md">
+          <div className="mb-6 p-6 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 inline-flex animate-float shadow-lg">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-primary" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
             </svg>
           </div>
-          <h2 className="text-2xl font-medium mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Welcome to Messages</h2>
+          <h2 className="text-2xl font-medium mb-2 text-gradient">Welcome to Messages</h2>
           <p className="text-muted-foreground max-w-md mx-auto">
             Select a conversation or start a new one to begin messaging
           </p>
@@ -67,7 +67,7 @@ const Conversation = ({ isMobile }: ConversationProps) => {
           onBack={() => navigate("/")}
         />
       )}
-      <div className="flex-1 overflow-y-auto p-4 bg-gradient-to-br from-secondary/20 to-white">
+      <div className="flex-1 overflow-y-auto p-4 bg-gradient-to-br from-secondary/10 to-background">
         <div className="max-w-3xl mx-auto">
           {currentChat.messages.map((message, index) => (
             <MessageBubble

@@ -138,7 +138,8 @@ export default {
 			backgroundImage: {
 				'chat-pattern': "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIHN0cm9rZT0iI2U1ZTdlYiIgc3Ryb2tlLW9wYWNpdHk9Ii4yIiBjeD0iMTAiIGN5PSIxMCIgcj0iOS41Ii8+PC9nPjwvc3ZnPg==')",
 				'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
-				'gradient-primary': 'linear-gradient(to right, hsl(var(--gradient-start)), hsl(var(--gradient-end)))'
+				'gradient-primary': 'linear-gradient(to right, hsl(var(--gradient-start)), hsl(var(--gradient-end)))',
+				'gradient-dark': 'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%)'
 			}
 		}
 	},
