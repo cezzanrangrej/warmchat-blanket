@@ -70,6 +70,10 @@ export default {
 					sent: 'hsl(var(--chat-sent))',
 					received: 'hsl(var(--chat-received))',
 					background: 'hsl(var(--chat-background))'
+				},
+				gradient: {
+					start: 'hsl(var(--gradient-start))',
+					end: 'hsl(var(--gradient-end))'
 				}
 			},
 			borderRadius: {
@@ -109,6 +113,14 @@ export default {
 				'scale-in': {
 					'0%': { transform: 'scale(0.95)', opacity: '0' },
 					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-5px)' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { boxShadow: '0 0 0 0 hsla(var(--primary), 0.4)' },
+					'50%': { boxShadow: '0 0 20px 5px hsla(var(--primary), 0.2)' }
 				}
 			},
 			animation: {
@@ -119,10 +131,14 @@ export default {
 				'slide-in': 'slide-in 0.4s ease-out',
 				'slide-out': 'slide-out 0.4s ease-out',
 				'pulse-soft': 'pulse-soft 2s ease-in-out infinite',
-				'scale-in': 'scale-in 0.2s ease-out'
+				'scale-in': 'scale-in 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
 			},
 			backgroundImage: {
-				'chat-pattern': "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIHN0cm9rZT0iI2U1ZTdlYiIgc3Ryb2tlLW9wYWNpdHk9Ii4yIiBjeD0iMTAiIGN5PSIxMCIgcj0iOS41Ii8+PC9nPjwvc3ZnPg==')"
+				'chat-pattern': "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIHN0cm9rZT0iI2U1ZTdlYiIgc3Ryb2tlLW9wYWNpdHk9Ii4yIiBjeD0iMTAiIGN5PSIxMCIgcj0iOS41Ii8+PC9nPjwvc3ZnPg==')",
+				'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
+				'gradient-primary': 'linear-gradient(to right, hsl(var(--gradient-start)), hsl(var(--gradient-end)))'
 			}
 		}
 	},

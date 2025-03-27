@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Search, PlusCircle, Settings, Menu } from "lucide-react";
-import { useChat } from "@/utils/data";
+import { useChat } from "@/utils/data.tsx";
 import UserAvatar from "@/components/ui/UserAvatar";
 
 interface HeaderProps {
@@ -16,11 +16,11 @@ const Header = ({ toggleSidebar, showBackButton, title, onBack }: HeaderProps) =
   const [isSearchActive, setIsSearchActive] = useState(false);
 
   return (
-    <header className="border-b p-4 flex items-center gap-4 bg-white/80 backdrop-blur-md z-10">
+    <header className="border-b border-primary/10 p-4 flex items-center gap-4 bg-gradient-to-r from-primary/5 to-accent/5 backdrop-blur-md z-10 shadow-sm">
       {showBackButton ? (
         <button 
           onClick={onBack} 
-          className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+          className="p-2 rounded-full bg-white/50 hover:bg-white/80 text-primary hover:text-accent transition-colors shadow-sm"
           aria-label="Go back"
         >
           <svg 
@@ -39,7 +39,7 @@ const Header = ({ toggleSidebar, showBackButton, title, onBack }: HeaderProps) =
       ) : (
         <button 
           onClick={toggleSidebar} 
-          className="lg:hidden p-2 rounded-full hover:bg-gray-100 transition-colors"
+          className="lg:hidden p-2 rounded-full bg-white/50 hover:bg-white/80 text-primary hover:text-accent transition-colors shadow-sm"
           aria-label="Toggle menu"
         >
           <Menu size={20} />
@@ -48,7 +48,7 @@ const Header = ({ toggleSidebar, showBackButton, title, onBack }: HeaderProps) =
 
       {title ? (
         <div className="flex-1">
-          <h1 className="text-lg font-medium">{title}</h1>
+          <h1 className="text-lg font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{title}</h1>
         </div>
       ) : (
         <div className={`flex-1 transition-all duration-300 ${isSearchActive ? 'flex' : 'hidden md:flex'}`}>
@@ -56,11 +56,11 @@ const Header = ({ toggleSidebar, showBackButton, title, onBack }: HeaderProps) =
             <input
               type="text"
               placeholder="Search messages"
-              className="w-full h-10 pl-10 pr-4 rounded-full bg-gray-100 focus:outline-none focus:ring-1 focus:ring-primary transition-all"
+              className="w-full h-10 pl-10 pr-4 rounded-full bg-white/80 focus:bg-white border border-primary/10 focus:border-primary/20 focus:outline-none focus:ring-1 focus:ring-primary/30 transition-all shadow-sm"
               onFocus={() => setIsSearchActive(true)}
               onBlur={() => setIsSearchActive(false)}
             />
-            <Search className="absolute left-3 top-2.5 text-gray-500" size={18} />
+            <Search className="absolute left-3 top-2.5 text-primary/70" size={18} />
           </div>
         </div>
       )}
@@ -69,13 +69,13 @@ const Header = ({ toggleSidebar, showBackButton, title, onBack }: HeaderProps) =
         {!isSearchActive && (
           <>
             <button 
-              className="p-2 rounded-full hover:bg-gray-100 transition-colors hidden sm:flex"
+              className="p-2 rounded-full bg-white/50 hover:bg-white/80 text-primary hover:text-accent transition-colors hidden sm:flex shadow-sm"
               aria-label="Create new chat"
             >
               <PlusCircle size={20} />
             </button>
             <button 
-              className="p-2 rounded-full hover:bg-gray-100 transition-colors hidden sm:flex"
+              className="p-2 rounded-full bg-white/50 hover:bg-white/80 text-primary hover:text-accent transition-colors hidden sm:flex shadow-sm"
               aria-label="Settings"
             >
               <Settings size={20} />
